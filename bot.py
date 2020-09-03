@@ -20,4 +20,5 @@ async def technews(ctx):
     for news in soup.find(class_='site-main post-listing').findAll(class_='entry-header'):
         await ctx.send(news.find('time').string+':'+news.find('a').string)
 
-bot.run("NzQ3NzA0MTE0NTAyMzAzODM3.X0SvuA.XaTyeUJgjgEJxIFIS-T77q5cQC8")
+s = input("Please enter the token of the bot:")
+bot.run(s)
