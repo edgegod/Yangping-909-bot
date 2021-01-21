@@ -21,12 +21,15 @@ async def technews(ctx):
     for news in soup.find(class_='site-main post-listing').findAll(class_='entry-header'):
         await ctx.send(news.find('time').string+':'+news.find('a').string)
 @bot.event()
-async def on_memeber-join{memeber}:
-    print(F'{member}litte asshole join!')
-    
- @bot.event()
-async def on_memeber-remove{memeber}:
-    print(F'{member}little asshole leave!')
+async def on_memeber-join(memeber):
+    channel = bot.get_channel (801799914635001917)
+    await channel.send (F'{member}litte asshole join!')
+
+@bot.event()
+async def on_memeber-remove(memeber):
+    channel = bot.get_channel (801799914635001917)
+    await channel.send (F'{member}litte asshole leave!')
+
     
 s = input("Please enter the token of the bot:")
 bot.run(s)
