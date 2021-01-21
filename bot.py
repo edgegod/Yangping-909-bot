@@ -6,8 +6,8 @@ bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
-    channel = bot.get_channel(747716993490354176)
-    await channel.send("Hello, Discord!")
+    channel = bot.get_channel(801799914635001917)
+    await channel.send("Hello, 909!")
 
 @bot.command()
 async def ping(ctx):
