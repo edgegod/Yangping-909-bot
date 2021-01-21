@@ -19,6 +19,8 @@ async def technews(ctx):
     soup = BeautifulSoup(web_data.text,"html.parser")
     for news in soup.find(class_='site-main post-listing').findAll(class_='entry-header'):
         await ctx.send(news.find('time').string+':'+news.find('a').string)
+@bot.command()
+async def play(ctx):
 
 s = input("Please enter the token of the bot:")
 bot.run(s)
