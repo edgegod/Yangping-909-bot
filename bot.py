@@ -6,6 +6,7 @@ bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
+    print(">>bot is onlone<<")
     channel = bot.get_channel(801799914635001917)
     await channel.send("Hello, 909!")
 
@@ -19,6 +20,12 @@ async def technews(ctx):
     soup = BeautifulSoup(web_data.text,"html.parser")
     for news in soup.find(class_='site-main post-listing').findAll(class_='entry-header'):
         await ctx.send(news.find('time').string+':'+news.find('a').string)
-
+@bot.event()
+async def on_memeber-join{memeber}:
+    print(F'{member}litte asshole join!')
+    
+ @bot.event()
+async def on_memeber-remove{memeber}:
+    print(F'{member}little asshole leave!')
 s = input("Please enter the token of the bot:")
 bot.run(s)
