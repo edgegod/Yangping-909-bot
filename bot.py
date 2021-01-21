@@ -20,13 +20,14 @@ async def technews(ctx):
     soup = BeautifulSoup(web_data.text,"html.parser")
     for news in soup.find(class_='site-main post-listing').findAll(class_='entry-header'):
         await ctx.send(news.find('time').string+':'+news.find('a').string)
-@bot.event()
-async def on_memeber-join{memeber}:
-    print(F'{member}litte asshole join!')
+
+@bot.event
+async def on_memeber_join(memeber):
+    await print(f"{member} litte asshole join!")
+
+@bot.event
+async def on_memeber_remove(memeber):
+    await print(f"{member} little asshole leave!")
     
- @bot.event()
-async def on_memeber-remove{memeber}:
-    print(F'{member}little asshole leave!')
-    
-s = input("Please enter the token of the bot:")
-bot.run(s)
+#s = input("Please enter the token of the bot:")
+bot.run("ODAxNDQxMjE3MTA3NTkxMTY5.YAguTA.kTPNpaR5eMaH3okdOJ9kkT_cH5o")
