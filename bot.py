@@ -23,11 +23,12 @@ async def technews(ctx):
 
 @bot.event
 async def on_memeber_join(memeber):
-    await print(f"{member} litte asshole join!")
-
+    channel = bot.get_channel (801799914635001917)
+    await channel.send (F'{member}litte asshole join!')
 @bot.event
 async def on_memeber_remove(memeber):
-    await print(f"{member} little asshole leave!")
+    channel = bot.get_channel (801799914635001917)
+    await channel.send (F'{member}litte asshole leave!')
     
 #s = input("Please enter the token of the bot:")
 bot.run("ODAxNDQxMjE3MTA3NTkxMTY5.YAguTA.kTPNpaR5eMaH3okdOJ9kkT_cH5o")
