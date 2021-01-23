@@ -3,6 +3,7 @@ from discord.ext import commands
 import requests
 from bs4 import BeautifulSoup
 bot = commands.Bot(command_prefix='!')
+import json
 
 @bot.event
 async def on_ready():
